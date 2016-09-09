@@ -169,7 +169,7 @@ public class BazelPythonSemantics implements PythonSemantics {
               .addInput(zipFile)
               .addOutput(executable)
               .setShellCommand(
-                  "echo '#!/usr/bin/env python' | cat - "
+                  "echo '#!/usr/bin/env python2' | cat - "
                       + zipFile.getExecPathString()
                       + " > "
                       + executable.getExecPathString())

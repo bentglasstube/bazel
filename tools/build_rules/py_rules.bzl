@@ -78,7 +78,7 @@ def py_binary_impl(ctx):
   ctx.action(
       inputs = [ deploy_zip, ],
       outputs = [ executable, ],
-      command = "echo '#!/usr/bin/env python' | cat - %s > %s" % (
+      command = "echo '#!/usr/bin/env python2' | cat - %s > %s" % (
           deploy_zip.path, executable.path))
 
   runfiles_files = transitive_sources + [executable]
